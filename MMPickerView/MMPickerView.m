@@ -98,6 +98,7 @@ NSString * const MMshowsSelectionIndicator = @"showsSelectionIndicator";
 }
 
 +(void)removePickerView{
+  [[[self sharedView] subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
   [[self sharedView] removeFromSuperview];
 }
 
